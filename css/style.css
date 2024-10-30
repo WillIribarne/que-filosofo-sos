@@ -22,4 +22,13 @@
     border: 3px solid green;
     padding: 10px;
     text-align: center;
+    transition: opacity 1s ease;
+}
+
+.hola{
+    opacity: 1;
+}
+
+.chau{
+    opacity: 0;
 }
