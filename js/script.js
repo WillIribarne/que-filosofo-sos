@@ -9,7 +9,7 @@ function mostrarPortada() {
 
 function mostrarReglas() {
     desaparecerTexto();
-    mostrarTexto('../datafiles/reglas.html');
+    mostrarTexto('../datafiles/instrucciones.html');
     setTimeout(aparecerTexto, 1000);
 }
 
