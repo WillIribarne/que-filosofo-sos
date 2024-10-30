@@ -8,11 +8,28 @@
 </head>
 <body>
     <div class="topbar">
-        <span onclick="mostrarPortada()">¿Qué filósofo Sos?</span>
-        <span onclick="mostrarReglas()">Instrucciones</span>
-        <span onclick="mostrarInfo()">Más Info</span>
+        <span class="titulos" onclick="mostrarPortada()">¿Qué filósofo Sos?</span>
+        <span class="titulos" onclick="mostrarInstr()">Instrucciones</span>
+        <span class="titulos" onclick="mostrarInfo()">Más Info</span>
+        <span class="copyright">@2024 copyright - R.I.</span>
     </div>
-    <div id="contenidoPrincipal" class="hola"><p>dorime interimo adapare dorime</p></div>
+    <div id="contenidoPrincipal" class="hola">
+        <p class="tituloPortada">¿Qué filósofo sos?</p>
+        <img src="../img/aristoteles.jpeg" class="imagenPortada">
+        <img src="../img/descartes.jpg" class="imagenPortada">
+        <img src="../img/platon.jpeg" class="imagenPortada">
+        <img src="../img/spinoza.jpeg" class="imagenPortada">
+        <img src="../img/san_agustin_de_hipona.jpg" class="imagenPortada">
+        <img src="../img/nietzsche.jpg" class="imagenPortada">
+        <img src="../img/atlanta.jpg" class="imagenPortada">
+        <img src="../img/atlanta.jpg" class="imagenPortada">
+        <img src="../img/atlanta.jpg" class="imagenPortada">
+        <img src="../img/atlanta.jpg" class="imagenPortada">
+        <button onclick="empezarJuego()" onmouseenter="" class="botonHacerTest px-3 mt-2 violetita">¡Comienza el test!</button>
+        <br>
+        <button onclick="mostrarInstr()" onmouseenter="" class="botonHacerTest px-3 mt-2 mx-3 patito">Instrucciones</button>
+        <button onclick="mostrarInfo()" onmouseenter="" class="botonHacerTest px-3 mt-2 mx-3 marroncito">Sobre nosotros</button>
+        </div>
     <script src="js/script.js"></script>
 </body>
 </html>

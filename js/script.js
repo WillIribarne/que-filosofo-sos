@@ -1,21 +1,22 @@
 const contPrincipal = document.getElementById('contenidoPrincipal');
 const preguntas = [];
+const respuestas = [];
 
 function mostrarPortada() {
     desaparecerTexto();
-    mostrarTexto('../datafiles/portada.html');
+    mostrarTexto('../views/portada.html');
     setTimeout(aparecerTexto, 1000);
 }
 
-function mostrarReglas() {
+function mostrarInstr() {
     desaparecerTexto();
-    mostrarTexto('../datafiles/instrucciones.html');
+    mostrarTexto('../views/instrucciones.html');
     setTimeout(aparecerTexto, 1000);
 }
 
 function mostrarInfo() {
     desaparecerTexto();
-    mostrarTexto('../datafiles/masInfo.html');
+    mostrarTexto('../views/masInfo.html');
     setTimeout(aparecerTexto, 1000);
 }
 
@@ -43,3 +44,17 @@ function mostrarTexto(ruta){
         .catch(error => console.error('Error loading HTML:', error));
     }, 1000);
 }
+
+function loadQuestions() {
+    fetch('../data/preguntas.txt')
+        .then(response => response.text())
+        .then(data => {
+            questionsArray.push(...data.split('\n'));
+            console.log(questionsArray);
+        })
+        .catch(error => console.error('Error loading questions:', error));
+}
+
+// Call the function to load questions
+loadQuestions();
+

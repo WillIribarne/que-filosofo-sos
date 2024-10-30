@@ -8,22 +8,34 @@ body{
     padding: 10px;
 }
 
-.topbar span{
+.topbar .titulos{
     margin-left: 5%;
     margin-right: 5%;
     color: azure;
     font-size: x-large;
     transition: color 0.3s ease;
+    cursor: pointer;
 }
 
-.topbar span:hover{
+.topbar .titulos:hover{
     color: blueviolet;
+}
+
+.copyright{
+    font-size: 12px;
+    color: azure;
+    cursor: auto;
+    position: absolute;
+    right: 5px;
+    margin: 10px;
 }
 
 #contenidoPrincipal{
     margin: auto;
-    width: 50%;
-    border: 3px solid green;
+    width: 60%;
+    border-left: 3px solid green;
+    border-right: 3px solid green;
+    border-bottom: 3px solid green;
     padding: 10px;
     text-align: center;
     transition: opacity 1s ease;
@@ -37,16 +49,68 @@ body{
     opacity: 0;
 }
 
+.tituloPortada{
+    font-size: 40px;
+}
+
 .tituloInstr{
-    font-size: 18px;
+    font-weight: bold;
 }
 
 .cuerpoInstr{
     font-size: 18px;
 }
 
+.cuerpoInfo{
+    font-size: 18px;
+}
+
 .botonHacerTest{
-    background-color: blueviolet;
     border-radius: 10px;
     padding: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.botonHacerTest:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.imagenPortada{
+    border-style: double;
+    border-radius: 10px;
+    border-width: 10px;
+    margin: 5px;
+    width: 140px;
+    height: 140px;
+}
+
+.px-3{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.mt-2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mx-3{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+
+.violetita{
+    background-color: blueviolet;
+}
+
+.marroncito{
+    background-color: chocolate;
+}
+
+.patito{
+    background-color: goldenrod;
 }
