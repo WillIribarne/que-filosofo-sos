@@ -5,19 +5,19 @@ const respuestas = [];
 function mostrarPortada() {
     desaparecerTexto();
     mostrarTexto('../views/portada.html');
-    setTimeout(aparecerTexto, 1000);
+    setTimeout(aparecerTexto, 1300);
 }
 
 function mostrarInstr() {
     desaparecerTexto();
     mostrarTexto('../views/instrucciones.html');
-    setTimeout(aparecerTexto, 1000);
+    setTimeout(aparecerTexto, 1300);
 }
 
 function mostrarInfo() {
     desaparecerTexto();
     mostrarTexto('../views/masInfo.html');
-    setTimeout(aparecerTexto, 1000);
+    setTimeout(aparecerTexto, 1300);
 }
 
 function empezarJuego(){
