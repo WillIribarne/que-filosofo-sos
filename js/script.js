@@ -1,6 +1,15 @@
 const contPrincipal = document.getElementById('contenidoPrincipal');
 const preguntas = [];
 const respuestas = [];
+const porcentajes = new Map([
+    ["Aristoteles", 0],
+    ["Platón", 0],
+    ["Sócrates", 0],
+    ["Nietzsche", 0],
+    ["Descartes", 0],
+    ["San_Agustín_De_Hipona", 0],
+    ["Spinoza", 0]
+])
 
 function mostrarPortada() {
     desaparecerTexto();
@@ -21,7 +30,13 @@ function mostrarInfo() {
 }
 
 function empezarJuego(){
-
+    if (preguntas.length === 0) {
+        cargarPreguntas();
+        cargarRespuestas();
+    }
+    for (let p of preguntas) {
+        print(p);
+    }
 }
 
 function desaparecerTexto(){
@@ -41,20 +56,32 @@ function mostrarTexto(ruta){
         .then(data => {
             contPrincipal.innerHTML = data;
         })
-        .catch(error => console.error('Error loading HTML:', error));
+        .catch(error => console.error('Error cargando HTML:', error));
     }, 1000);
 }
 
-function loadQuestions() {
+function cargarPreguntas() {
     fetch('../data/preguntas.txt')
         .then(response => response.text())
         .then(data => {
-            questionsArray.push(...data.split('\n'));
-            console.log(questionsArray);
+            preguntas.push(...data.split('\n').map(line => line.replace('\r', '')));
+            console.log(preguntas)
         })
-        .catch(error => console.error('Error loading questions:', error));
+        .catch(error => console.error('Error loading preguntas:', error));
 }
 
-// Call the function to load questions
-loadQuestions();
-
+function cargarRespuestas() {
+    fetch('../data/respuestas.txt')
+        .then(response => response.text())
+        .then(data => {
+            const questionGroups = data.split('-');
+            questionGroups.forEach(group => {
+                const rtas = group.trim().split('\n').map(line => line.replace('\r', '').trim());
+                if (rtas.length > 1) {
+                    respuestas.push(rtas);
+                }
+            });
+            console.log(respuestas);
+        })
+        .catch(error => console.error('Error cargando respuestas:', error));
+}
