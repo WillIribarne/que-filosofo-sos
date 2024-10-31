@@ -65,6 +65,50 @@ body{
     font-size: 18px;
 }
 
+.tituloJuego{
+    font-weight: bold;
+}
+
+.cuerpoJuego{
+    font-size: 18px;
+}
+
+.tituloPregunta{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.letraGrande{
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+#numeroPregunta{
+
+}
+
+#pregunta{
+    font-size: 18px;
+}
+
+#respuesta{
+    text-align: left;
+}
+
+.botonRespuesta{
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.botonHacerTest:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
 .botonHacerTest{
     border-radius: 10px;
     padding: 10px;

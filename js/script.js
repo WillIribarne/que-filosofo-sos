@@ -34,9 +34,7 @@ function empezarJuego(){
         cargarPreguntas();
         cargarRespuestas();
     }
-    for (let p of preguntas) {
-        print(p);
-    }
+    testFilosofico();
 }
 
 function desaparecerTexto(){
@@ -84,4 +82,33 @@ function cargarRespuestas() {
             console.log(respuestas);
         })
         .catch(error => console.error('Error cargando respuestas:', error));
+}
+function testFilosofico(){
+    let i = 0;
+    if (i < 10){
+        mostrarPreguntaYRtas(i);
+    }
+}
+
+function mostrarPreguntaYRtas(i) {
+    desaparecerTexto();
+    mostrarTexto('../views/juego.html'); //aca ya se modifica el contPrincipal. OJO QUE ES ASYNC
+    setTimeout(() => {actualizarJuego(i);}, 1100);
+    setTimeout(aparecerTexto, 2300);
+}
+
+function actualizarJuego(i){
+    document.getElementById('numeroPregunta').innerHTML = (i + 1);
+    document.getElementById('pregunta').innerHTML = preguntas[i];
+    document.getElementById('respuesta').innerHTML = agregarRespuestas(i);
+}
+
+function agregarRespuestas(i){
+    let textoResp = '';
+    let opcion = 'A';
+    for (x in respuestas[i]){
+        textoResp +=  "<span class=\"letraGrande\">" + opcion + ": </span>" + "<button class=\"botonRespuesta violetita\">" + respuestas[i][x] + "</button><br>";
+        console.log(parseInt(opcion)); //esto da NaN
+    }
+    return textoResp;
 }
