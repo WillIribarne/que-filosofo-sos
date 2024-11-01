@@ -84,10 +84,7 @@ function cargarRespuestas() {
         .catch(error => console.error('Error cargando respuestas:', error));
 }
 function testFilosofico(){
-    let i = 0;
-    if (i < 10){
-        mostrarPreguntaYRtas(i);
-    }
+    mostrarPreguntaYRtas(0);
 }
 
 function mostrarPreguntaYRtas(i) {
@@ -98,17 +95,111 @@ function mostrarPreguntaYRtas(i) {
 }
 
 function actualizarJuego(i){
-    document.getElementById('numeroPregunta').innerHTML = (i + 1);
-    document.getElementById('pregunta').innerHTML = preguntas[i];
-    document.getElementById('respuesta').innerHTML = agregarRespuestas(i);
+    if (i < 10){
+        document.getElementById('numeroPregunta').innerHTML = (i + 1);
+        document.getElementById('pregunta').innerHTML = preguntas[i];
+        document.getElementById('respuesta').innerHTML = agregarRespuestas(i);
+    } else {
+        mostrarInfo(); //aca tiene que ser mostrarResultado();
+    }
 }
 
 function agregarRespuestas(i){
     let textoResp = '';
     let opcion = 'A';
     for (x in respuestas[i]){
-        textoResp +=  "<span class=\"letraGrande\">" + opcion + ": </span>" + "<button class=\"botonRespuesta violetita\">" + respuestas[i][x] + "</button><br>";
-        console.log(parseInt(opcion)); //esto da NaN
+        textoResp +=  "<span class=\"letraGrande\">" + opcion + ": </span>" + "<button class=\"botonRespuesta gricesito\" onclick=\" rta" + opcion + "("+ (i+1) + ")\">" + respuestas[i][x] + "</button><br>";
+        opcion = String.fromCharCode(opcion.charCodeAt(0) + 1); //esto va A,B,C,D,E
     }
     return textoResp;
+}
+
+function rtaA(numeroPregunta){
+    switch(numeroPregunta) {
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        case 4:
+            break;
+        case 5:
+            break;
+        case 6:
+            break;
+    }
+    mostrarPreguntaYRtas(numeroPregunta);
+}
+
+function rtaB(numeroPregunta){
+    switch(numeroPregunta) {
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        case 4:
+            break;
+        case 5:
+            break;
+        case 6:
+            break;
+      }
+      mostrarPreguntaYRtas(numeroPregunta);
+}
+
+function rtaC(numeroPregunta){
+    switch(numeroPregunta) {
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        case 4:
+            break;
+        case 5:
+            break;
+        case 6:
+            break;
+      }
+      mostrarPreguntaYRtas(numeroPregunta);
+}
+
+function rtaD(numeroPregunta){
+    switch(numeroPregunta) {
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        case 4:
+            break;
+        case 5:
+            break;
+        case 6:
+            break;
+      }
+      mostrarPreguntaYRtas(numeroPregunta);
+}
+
+function rtaE(numeroPregunta){
+    switch(numeroPregunta) {
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        case 4:
+            break;
+        case 5:
+            break;
+        case 6:
+            break;
+      }
+      mostrarPreguntaYRtas(numeroPregunta);
 }

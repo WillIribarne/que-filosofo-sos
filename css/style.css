@@ -33,9 +33,9 @@ body{
 #contenidoPrincipal{
     margin: auto;
     width: 60%;
-    border-left: 3px solid green;
-    border-right: 3px solid green;
-    border-bottom: 3px solid green;
+    border-left: 5px solid green;
+    border-right: 5px solid green;
+    border-bottom: 5px solid green;
     padding: 10px;
     text-align: center;
     transition: opacity 1s ease;
@@ -79,7 +79,7 @@ body{
 }
 
 .letraGrande{
-    font-size: 40px;
+    font-size: 32px;
     font-weight: bolder;
 }
 
@@ -99,10 +99,11 @@ body{
     border-radius: 10px;
     padding: 10px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
     transition: box-shadow 0.3s ease-in-out;
     margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .botonHacerTest:hover {
@@ -157,4 +158,8 @@ body{
 
 .patito{
     background-color: goldenrod;
+}
+
+.gricesito{
+    background-color: lightgray;
 }
