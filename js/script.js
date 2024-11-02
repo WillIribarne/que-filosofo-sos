@@ -1,6 +1,88 @@
 const contPrincipal = document.getElementById('contenidoPrincipal');
-const preguntas = [];
-const respuestas = [];
+const preguntas = [
+    "¿Cuál es el propósito de la vida?",
+    "¿Como crees que adquirimos conocimiento verdadero?",
+    "¿Cuál es la relación entre el ser humano y el universo?",
+    "¿Cuál es tu visión sobre la ética y la moral?",
+    "¿Qué importancia tiene el individuo en la sociedad?",
+    "¿Qué lugar ocupa Dios o lo divino en tu vida?",
+    "Si tenés un conflicto con un amigo cercano, ¿cómo abordas la situación?",
+    "¿Qué hacés cuando te enfrentas a una decisión importante que cambiará tu vida?",
+    "Si tienes una meta a largo plazo, pero te encuentras con obstáculos constantes, ¿cómo actúas?",
+    "¿Cómo reaccionas cuando enfrentas una injusticia en tu entorno, como en el trabajo o la escuela?"
+];
+const respuestas = [
+    [
+        "Buscar el bien supremo y vivir en virtud",
+        "Cuestionar constantemente para descubrir la verdad",
+        "Perfeccionarse y alinearse con la naturaleza universal",
+        "Comprender el mundo a través de la razón y dudar de lo incierto",
+        "Aceptar el caos y encontrar la propia voluntad de poder"
+    ],
+    [
+        "A través de la experiencia sensorial y el razonamiento lógico",
+        "Con la introspección y la luz divina en el alma",
+        "Cuestionando y dialogando con otros",
+        "Mediante la deducción y la claridad de las ideas",
+        "Alineándonos con la armonía del universo"
+    ],
+    [
+        "El ser humano es parte de la naturaleza y debe vivir de acuerdo a ella",
+        "El alma humana es inmortal y tiene conocimiento de las ideas eternas",
+        "Cada persona debe crear su propio sentido de la vida, enfrentando el caos",
+        "Hay una unión esencial entre el hombre y lo divino",
+        "El ser humano y el universo son elementos en constante cambio"
+    ],
+    [
+        "Vivir conforme a la virtud para alcanzar la felicidad",
+        "La moral se basa en el amor y la caridad hacia los demás",
+        "La ética proviene de la razón y el respeto a las leyes universales",
+        "Cuestionar las convenciones morales impuestas y buscar el poder personal",
+        "Seguir las leyes de la naturaleza y aceptar el destino"
+    ],
+    [
+        "El individuo debe buscar su propio desarrollo moral y ético para el bien común",
+        "La sociedad es un conjunto de ideas en las que cada persona encuentra su papel",
+        "Cada individuo es responsable de crear su propio sentido y no seguir normas impuestas",
+        "El individuo debe vivir en armonía con las leyes de la naturaleza",
+        "La sociedad y el individuo deben unirse en un propósito trascendental"
+    ],
+    [
+        "Dios es la fuente de toda verdad y el fin último al que aspiramos",
+        "Lo divino es una fuerza unificadora en la naturaleza y en el orden universal",
+        "La existencia de Dios debe ser cuestionada racionalmente",
+        "Lo divino es un reflejo de las ideas puras y eternas",
+        "La fe en lo trascendental ayuda a comprender la existencia humana"
+    ],
+    [
+        "Busco resolver el problema de manera racional y promover el bien de la amistad",
+        "Trato de dialogar para entender la perspectiva del otro y encontrar una verdad compartida",
+        "Reflexiono sobre cómo la situación refleja aspectos más profundos del alma y el amor divino",
+        "Considero el conflicto como una oportunidad para reforzar mi individualidad y autenticidad",
+        "Veo el conflicto como parte del flujo natural de las relaciones, que debemos aceptar con serenidad "
+    ],
+    [
+        "Evalúo la decisión en función de la virtud y su impacto en mi desarrollo moral",
+        "Pienso en cómo la decisión puede alinearse con mi búsqueda de la verdad y el propósito personal",
+        "Utilizo la duda y la reflexión para llegar a una conclusión racional y clara",
+        "Me dejo guiar por mi intuición y el sentido de orden cósmico para tomar la decisión correcta",
+        "Veo la decisión como una oportunidad para superar mis propios límites y crear mi propio destino"
+    ],
+    [
+        "Sigo adelante con disciplina, viendo cada obstáculo como una oportunidad para fortalecerme",
+        "Reflexiono sobre si la meta sigue alineada con mis valores y la verdadera naturaleza del bien",
+        "Cuestiono las dificultades y aprendo de ellas para adaptarme y mejorar mi estrategia",
+        "Acepto que los obstáculos son parte de la lucha por crear mi propio sentido de vida",
+        "Considero que las dificultades pueden ser un signo de algo trascendental que guía mi camino"
+    ],
+    [
+        "Intento buscar una solución justa que promueva el bienestar de todos",
+        "Reflexiono sobre la situación y cuestiono la naturaleza de la justicia misma",
+        "Me esfuerzo por actuar conforme a principios racionales, en armonía con la naturaleza",
+        "Pienso que cada uno debe enfrentarse a las injusticias según sus propios principios, sin seguir normas impuestas",
+        "Creo que es una oportunidad para buscar un propósito más profundo y trascender la situación"
+    ]
+];
 const porcentajes = new Map([
     ["Aristóteles", 0],
     ["Platón", 0],
