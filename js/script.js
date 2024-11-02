@@ -174,9 +174,13 @@ function testFilosofico(){
 
 function mostrarPreguntaYRtas(i) {
     desaparecerTexto();
-    if (i < 10) {mostrarTexto('../views/juego.html');} //aca ya se modifica el contPrincipal. OJO QUE ES ASYNC
-    setTimeout(() => {actualizarJuego(i);}, 1100);
-    setTimeout(aparecerTexto, 2300);
+    if (i < 10) {
+        mostrarTexto('../views/juego.html'); //aca ya se modifica el contPrincipal. OJO QUE ES ASYNC
+    } else {
+        mostrarTexto('../views/resultado.html');
+    }
+    setTimeout(() => {actualizarJuego(i);}, 1500);
+    setTimeout(aparecerTexto, 2400);
 }
 
 function actualizarJuego(i){
@@ -185,7 +189,7 @@ function actualizarJuego(i){
         document.getElementById('pregunta').innerHTML = preguntas[i];
         document.getElementById('respuesta').innerHTML = agregarRespuestas(i);
     } else {
-        mostrarResultado('../views/resultado.html');
+        mostrarResultado();
     }
 }
 
@@ -435,15 +439,11 @@ function rtaE(numeroPregunta){
 }
 
 function mostrarResultado(ruta){
-    mostrarTexto(ruta);
-    setTimeout(() => {
-        let filosofo = getFilosofoElegido();
-        document.getElementById('filosofo').innerHTML = filosofo;
-        agregarImagenResultados(filosofo);       
-        document.getElementById('perfilResultado').innerHTML = getPerfilResultado(filosofo);
-        document.getElementById('infoResultado').innerHTML = getInfoResultado(filosofo);
-    }, 1100);
-    setTimeout(aparecerTexto, 2000);
+    let filosofo = getFilosofoElegido();
+    document.getElementById('filosofo').innerHTML = filosofo;
+    agregarImagenResultados(filosofo);       
+    document.getElementById('perfilResultado').innerHTML = getPerfilResultado(filosofo);
+    document.getElementById('infoResultado').innerHTML = getInfoResultado(filosofo);
 }
 
 function agregarImagenResultados(filosofo){
