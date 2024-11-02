@@ -118,6 +118,7 @@ function empezarJuego(){
     if (preguntas.length === 0) {
         cargarPreguntas();
         cargarRespuestas();
+        porcentajes.forEach((valor, clave, mapa) => { mapa.set(clave, 0); });
     }
     testFilosofico();
 }
