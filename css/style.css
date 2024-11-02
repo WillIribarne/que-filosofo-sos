@@ -132,6 +132,16 @@ body{
     height: 140px;
 }
 
+.imagenResultado{
+    border-style: double;
+    border-radius: 10px;
+    border-width: 15px;
+    border-color: darkblue;
+    margin: 5px;
+    width: 280px;
+    height: 240px;
+}
+
 .px-3{
     padding-left: 30px;
     padding-right: 30px;

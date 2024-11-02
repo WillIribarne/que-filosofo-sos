@@ -100,7 +100,7 @@ function actualizarJuego(i){
         document.getElementById('pregunta').innerHTML = preguntas[i];
         document.getElementById('respuesta').innerHTML = agregarRespuestas(i);
     } else {
-        mostrarInfo(); //aca tiene que ser mostrarResultado();
+        mostrarResultado(); //aca tiene que ser mostrarResultado();
     }
 }
 
@@ -202,4 +202,8 @@ function rtaE(numeroPregunta){
             break;
       }
       mostrarPreguntaYRtas(numeroPregunta);
+}
+
+function mostrarResultado(){
+
 }
