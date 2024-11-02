@@ -7,7 +7,7 @@ const porcentajes = new Map([
     ["Sócrates", 0],
     ["Nietzsche", 0],
     ["Descartes", 0],
-    ["San Agustín De Hipona", 0],
+    ["San agustín de hipona", 0],
     ["Spinoza", 0],
     ["Jaspers", 0],
     ["Anaximandro", 0],
@@ -145,8 +145,8 @@ function rtaA(numeroPregunta){
             porcentajes.set("Aristóteles", valActual + 10);
             break;
         case 6:
-            valActual = porcentajes.get("San Agustín de Hipona");
-            porcentajes.set("San Agustín de Hipona", valActual + 10);
+            valActual = porcentajes.get("San agustín de hipona");
+            porcentajes.set("San agustín de hipona", valActual + 10);
             break;
         case 7:
             valActual = porcentajes.get("Aristóteles");
@@ -175,16 +175,16 @@ function rtaB(numeroPregunta){
             porcentajes.set("Sócrates", valActual + 10);
             break;
         case 2:
-            valActual = porcentajes.get("San Agustín de Hipona");
-            porcentajes.set("San Agustín de Hipona", valActual + 10);
+            valActual = porcentajes.get("San agustín de hipona");
+            porcentajes.set("San agustín de hipona", valActual + 10);
             break;
         case 3:
             valActual = porcentajes.get("Platón");
             porcentajes.set("Platón", valActual + 10);
             break;
         case 4:
-            valActual = porcentajes.get("San Agustín de Hipona");
-            porcentajes.set("San Agustín de Hipona", valActual + 10);
+            valActual = porcentajes.get("San agustín de hipona");
+            porcentajes.set("San agustín de hipona", valActual + 10);
             break;
         case 5:
             valActual = porcentajes.get("Platón");
@@ -241,8 +241,8 @@ function rtaC(numeroPregunta){
             porcentajes.set("Descartes", valActual + 10);
             break;
         case 7:
-            valActual = porcentajes.get("San Agustín de Hipona");
-            porcentajes.set("San Agustín de Hipona", valActual + 10);
+            valActual = porcentajes.get("San agustín de hipona");
+            porcentajes.set("San agustín de hipona", valActual + 10);
             break;
         case 8:
             valActual = porcentajes.get("Descartes");
@@ -384,8 +384,8 @@ function getPerfilResultado(filosofo){
             perfil = 'Perfil Aristotélico (Aristóteles / Sócrates)' 
             break;
         case 'Platón':
-        case 'San Agustín de Hipona':
-            perfil = 'Perfil Platónico (Platón / San Agustín de Hipona)'
+        case 'San agustín de hipona':
+            perfil = 'Perfil Platónico (Platón / San agustín de hipona)'
             break;
         case 'Nietzsche':
         case 'Anaximandro':
@@ -407,7 +407,7 @@ function getInfoResultado(filosofo){
     let info;
     if (filosofo === 'Aristóteles' || filosofo === 'Sócrates'){
         info = "Tus respuestas muestran una profunda orientación hacia la razón y la virtud práctica. Como Aristóteles, valoras la experiencia sensorial y el desarrollo ético como el camino hacia la felicidad. La constante búsqueda de la virtud y el bien común te asemeja a este pensador, mientras que tu aprecio por la exploración de ideas a través del diálogo refleja el método socrático.";
-    } else if (filosofo === 'Platón' || filosofo === 'San Agustín de Hipona') {
+    } else if (filosofo === 'Platón' || filosofo === 'San agustín de hipona') {
         info = "Tus elecciones indican un compromiso con las ideas trascendentales y el conocimiento de lo absoluto, como Platón, quien creía en un mundo de ideas puras accesible al alma humana. Tu conexión con lo divino y la inmortalidad del alma te emparenta también con San Agustín, que buscaba la verdad a través de la introspección y la iluminación divina.";
     } else if (filosofo === 'Nietzsche' || filosofo === 'Anaximandro') {
         info = "Tienes una visión del mundo basada en la individualidad y en enfrentar el caos de la vida. Al igual que Nietzsche, buscas desafiar las normas impuestas y construir tu propio sentido de la existencia. Este enfoque independiente y fuerte resuena también con Anaximandro, que creía en un universo en constante cambio y en el conflicto como parte del orden natural.";
