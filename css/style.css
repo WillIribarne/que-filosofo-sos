@@ -1,6 +1,7 @@
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0px;
+    background-color:blanchedalmond;
 }
 
 .topbar{
@@ -51,6 +52,7 @@ body{
 
 .tituloPortada{
     font-size: 40px;
+    margin:20px;
 }
 
 .tituloInstr{
@@ -88,7 +90,7 @@ body{
 }
 
 #pregunta{
-    font-size: 18px;
+    font-size: 22px;
 }
 
 #respuesta{
@@ -127,9 +129,12 @@ body{
     border-style: double;
     border-radius: 10px;
     border-width: 10px;
-    margin: 5px;
     width: 140px;
     height: 140px;
+}
+
+#cajaImagenResultado{
+    
 }
 
 .imagenResultado{
@@ -140,6 +145,24 @@ body{
     margin: 5px;
     width: 280px;
     height: 240px;
+}
+
+#perfilResultado{
+    margin:auto;
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-style: italic;
+    font-weight: 600;
+    background-color: darkgray;
+    width: 60%;
+    border-radius: 30px;
+    border-style: dashed;
+    padding: 10px;
+}
+
+#infoResultado{
+    font-size: 18px;
 }
 
 .px-3{
