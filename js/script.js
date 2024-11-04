@@ -181,7 +181,7 @@ function mostrarPreguntaYRtas(i) {
         mostrarTexto('../views/resultado.html');
     }
     setTimeout(() => {actualizarJuego(i);}, 1500);
-    setTimeout(aparecerTexto, 2400);
+    setTimeout(aparecerTexto, 4000);
 }
 
 function actualizarJuego(i){
